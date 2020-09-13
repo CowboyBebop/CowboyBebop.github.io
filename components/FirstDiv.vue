@@ -12,7 +12,7 @@
                 <h1 class="text-6xl leading-none .tracking-normal">OneHit</h1>
                 <h2
                   class="text-2xl leading-none .tracking-normal w-full"
-                >An editor, gamer and ofcourse, an HLB</h2>
+                >An Editor, Motion Graphics artist but a gamer at heart</h2>
               </div>
               <div class="flex justify-center mt-2 ml-2">
                 <a
@@ -27,62 +27,9 @@
           </div>
         </div>
       </div>
-      <div class="w-6/12 h-full overflow-hidden thumbnail-container">
-        <div class="lg:grid grid-flow-row grid-cols-3 overflow-hidden">
-          <img
-            src="https://media.discordapp.net/attachments/686653594551845104/754682182739427378/Thumbnail.png"
-          />
-          <img
-            src="https://media.discordapp.net/attachments/686653594551845104/754682622990614568/Amnesia_ep_2.png"
-          />
-          <img
-            src="https://media.discordapp.net/attachments/686653594551845104/754682720046809108/thumbnail_for_mw.png"
-          />
-          <img
-            src="https://media.discordapp.net/attachments/686653594551845104/754682814045225060/Eddie_Keeps_Failing.png"
-          />
-          <img
-            src="https://media.discordapp.net/attachments/686653594551845104/754683171400056852/Doinkly-ep-1.png"
-          />
-          <img
-            src="https://media.discordapp.net/attachments/686653594551845104/754683230854316112/Doinkly-ep-2.png"
-          />
-          <img
-            src="https://cdn.discordapp.com/attachments/686653594551845104/754683298738995261/Doom_Eternal_Part_5.png"
-          />
-          <img
-            src="https://cdn.discordapp.com/attachments/686653594551845104/754683323091124274/Doom_Eternal_Part_1.png"
-          />
-          <img
-            src="https://cdn.discordapp.com/attachments/686653594551845104/754683324575907920/Doom_Eternal_Part_3.png"
-          />
-          <img
-            src="https://cdn.discordapp.com/attachments/686653594551845104/754682720046809108/thumbnail_for_mw.png"
-          />
-          <img
-            src="https://cdn.discordapp.com/attachments/686653594551845104/754682814045225060/Eddie_Keeps_Failing.png"
-          />
-          <img
-            src="https://media.discordapp.net/attachments/686653594551845104/754683171400056852/Doinkly-ep-1.png"
-          />
-          <img
-            src="https://media.discordapp.net/attachments/686653594551845104/754682182739427378/Thumbnail.png"
-          />
-          <img
-            src="https://cdn.discordapp.com/attachments/686653594551845104/754683323091124274/Doom_Eternal_Part_1.png"
-          />
-          <img
-            src="https://cdn.discordapp.com/attachments/686653594551845104/754682622990614568/Amnesia_ep_2.png"
-          />
-          <img
-            src="https://cdn.discordapp.com/attachments/686653594551845104/754682622990614568/Amnesia_ep_2.png"
-          />
-          <img
-            src="https://cdn.discordapp.com/attachments/686653594551845104/754683230854316112/Doinkly-ep-2.png"
-          />
-          <img
-            src="https://cdn.discordapp.com/attachments/686653594551845104/754683171400056852/Doinkly-ep-1.png"
-          />
+      <div class="w-6/12 h-full overflow-hidden" style="z-index:1000;">
+        <div class="moving-img w-screen h-screen thumbnail-container" style="z-index:-1000;">
+          <!--<div class="lg:grid grid-flow-row grid-cols-3 overflow-hidden " ></div>-->
         </div>
       </div>
     </div>
@@ -104,6 +51,29 @@ export default {};
    border-solid border-8 border-white
 }
 */
+:root {
+  --moving-img-url: "https://cdn.discordapp.com/attachments/686653594551845104/754824944055091251/unknown.png";
+  --bg-width: 943px;
+  --bg-height: 965px;
+}
+
+@keyframes bg-scrolling-reverse {
+  from {
+    background-position: 0px;
+  }
+  to {
+    background-position: var(--bg-width) var(--bg-height);
+  }
+}
+
+.moving-img {
+  animation-timing-function: linear;
+  animation-delay: 0;
+  animation: bg-scrolling-reverse linear 10s infinite;
+  background: url("https://cdn.discordapp.com/attachments/686653594551845104/754824944055091251/unknown.png")
+    repeat 0 0;
+}
+
 .thumbnail-container {
   box-shadow: inset 0px 0px 75px 75px rgba(0, 0, 0, 0.7);
 }
@@ -141,4 +111,61 @@ div.thumbnail-container div img {
 .links {
   padding-top: 15px;
 }
+
+/*
+<img
+  src="https://media.discordapp.net/attachments/686653594551845104/754682182739427378/Thumbnail.png"
+/>
+<img
+  src="https://media.discordapp.net/attachments/686653594551845104/754682622990614568/Amnesia_ep_2.png"
+/>
+<img
+  src="https://media.discordapp.net/attachments/686653594551845104/754682720046809108/thumbnail_for_mw.png"
+/>
+<img
+  src="https://media.discordapp.net/attachments/686653594551845104/754682814045225060/Eddie_Keeps_Failing.png"
+/>
+<img
+  src="https://media.discordapp.net/attachments/686653594551845104/754683171400056852/Doinkly-ep-1.png"
+/>
+<img
+  src="https://media.discordapp.net/attachments/686653594551845104/754683230854316112/Doinkly-ep-2.png"
+/>
+<img
+  src="https://cdn.discordapp.com/attachments/686653594551845104/754683298738995261/Doom_Eternal_Part_5.png"
+/>
+<img
+  src="https://cdn.discordapp.com/attachments/686653594551845104/754683323091124274/Doom_Eternal_Part_1.png"
+/>
+<img
+  src="https://cdn.discordapp.com/attachments/686653594551845104/754683324575907920/Doom_Eternal_Part_3.png"
+/>
+<img
+  src="https://cdn.discordapp.com/attachments/686653594551845104/754682720046809108/thumbnail_for_mw.png"
+/>
+<img
+  src="https://cdn.discordapp.com/attachments/686653594551845104/754682814045225060/Eddie_Keeps_Failing.png"
+/>
+<img
+  src="https://media.discordapp.net/attachments/686653594551845104/754683171400056852/Doinkly-ep-1.png"
+/>
+<img
+  src="https://media.discordapp.net/attachments/686653594551845104/754682182739427378/Thumbnail.png"
+/>
+<img
+  src="https://cdn.discordapp.com/attachments/686653594551845104/754683323091124274/Doom_Eternal_Part_1.png"
+/>
+<img
+  src="https://cdn.discordapp.com/attachments/686653594551845104/754682622990614568/Amnesia_ep_2.png"
+/>
+<img
+  src="https://cdn.discordapp.com/attachments/686653594551845104/754682622990614568/Amnesia_ep_2.png"
+/>
+<img
+  src="https://cdn.discordapp.com/attachments/686653594551845104/754683230854316112/Doinkly-ep-2.png"
+/>
+<img
+  src="https://cdn.discordapp.com/attachments/686653594551845104/754683171400056852/Doinkly-ep-1.png"
+/> 
+          */
 </style>
