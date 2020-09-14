@@ -11,7 +11,7 @@
 .NuxtLogo {
   animation: 1s appear;
   background-color: grey;
-  border-color: deepskyblue;
+  border-color: #06e0e5;
   border-width: 4px;
 }
 

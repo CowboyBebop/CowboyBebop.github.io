@@ -1,48 +1,56 @@
 <template>
   <section class="m-0 w-screen h-screen">
     <div class="flex h-full w-full">
-      <div class="w-3/12 flex justify-center m-auto">
-        <div class="w-11/12 mb-10 flex">
-          <div class="w-2/5">
-            <OneHitLogo class />
-          </div>
-          <div class="w-3/5 flex justify-center m-auto">
-            <div>
-              <div class="w-full">
-                <h1 class="text-6xl leading-none .tracking-normal">OneHit</h1>
-                <h2 class="text-2xl leading-none .tracking-normal w-full">
-                  An Editor, Motion Graphics artist but a gamer at heart
-                </h2>
+      <div class="w-full h-full overflow-hidden">
+        <div
+          class="flex w-screen h-screen thumbnail-container moving-img thumbnail-borders"
+        >
+          <div
+            class="w-7/12 h-auto ml-0 justify-center m-auto bg-white rounded-lg shadow-2xl thing"
+          >
+            <div class="flex">
+              <div class="w-2/5">
+                <OneHitLogo class="ml-auto mr-auto" />
               </div>
-              <div class="flex justify-center mt-2 ml-2">
-                <a
-                  href="#process"
-                  class="mr-6 ml-6 bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded"
-                  >My process</a
-                >
-                <a
-                  class="mr-6 ml-6 bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded"
-                  >Contact me</a
-                >
+              <div class="w-3/5 flex justify-center m-auto">
+                <div>
+                  <div class="w-full">
+                    <h1 class="text-6xl leading-none .tracking-normal">
+                      OneHit
+                    </h1>
+                    <h2 class="text-2xl leading-none .tracking-normal w-full">
+                      An Editor, Motion Graphics artist but a gamer at heart
+                    </h2>
+                  </div>
+                  <div class="flex justify-center mt-2 ml-2">
+                    <a
+                      href="#process"
+                      class="mr-6 ml-6 bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded"
+                      >My process</a
+                    >
+                    <a
+                      class="mr-6 ml-6 bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded"
+                      >Contact me</a
+                    >
+                  </div>
+                  <div class="flex justify-center mt-2 space-x-2">
+                    <TwitterLogo class="w-12 h-12" style="color: #1da1f2" />
+                    <DiscordLogo class="w-12 h-12" style="color: #7289da" />
+                    <LinkedInLogo class="w-12 h-12" style="color: #0073b0" />
+                    <YoutubeLogo class="w-12 h-12" style="color: #ff0000" />
+                    <KoFiLogo class="w-12 h-12" />
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="w-6/12 h-full overflow-hidden">
-        <div
-          class="w-screen h-screen thumbnail-container moving-img thumbnail-borders"
-        >
-          <!--<div class="lg:grid grid-flow-row grid-cols-3 overflow-hidden " ></div>-->
         </div>
       </div>
     </div>
   </section>
 </template>
 
-<script>
-export default {};
-</script>
+<script></script>
 
 <style>
 /* Sample `apply` at-rules with Tailwind CSS
@@ -50,11 +58,7 @@ export default {};
 @apply min-h-screen flex justify-center items-center text-center mx-auto;
 }
 */
-/*
-.thing {
-   border-solid border-8 border-white
-}
-*/
+
 :root {
   --moving-img-url: "https://cdn.discordapp.com/attachments/686653594551845104/754824944055091251/unknown.png";
   --bg-width: 943px;
@@ -70,6 +74,16 @@ export default {};
   }
 }
 
+@keyframes appear-thing {
+  from {
+    margin-left: 100%;
+  }
+
+  to {
+    margin-left: 0%;
+  }
+}
+
 /*
 .thumbnail-borders {
   border: 1em solid white;
@@ -82,10 +96,16 @@ export default {};
 
 */
 
+.thing {
+  animation-duration: 2s;
+  animation-name: appear-thing;
+  animation-timing-function: ease-out;
+}
+
 .moving-img {
   animation-timing-function: linear;
   animation-delay: 0;
-  animation: bg-scrolling-reverse linear 10s infinite;
+  animation: bg-scrolling-reverse linear 100s infinite;
   background: url("https://cdn.discordapp.com/attachments/686653594551845104/754824944055091251/unknown.png")
     repeat 0 0;
 }

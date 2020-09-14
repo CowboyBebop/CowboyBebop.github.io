@@ -1,7 +1,8 @@
 <template>
   <div class="overflow-x-hidden">
-    <FirstDiv />
+    <Test />
     <ProcessDiv id="process" />
+    <ThirdDiv />
   </div>
 </template>
 
@@ -10,5 +11,3 @@ import Vue from "vue";
 
 export default Vue.extend({});
 </script>
-
-
