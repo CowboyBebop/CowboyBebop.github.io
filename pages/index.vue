@@ -2,7 +2,6 @@
   <div class="overflow-x-hidden">
     <Test />
     <ProcessDiv id="process" />
-    <ThirdDiv />
   </div>
 </template>
 
