@@ -1,7 +1,7 @@
 <template>
   <section class="m-0 w-screen h-screen">
     <div class="flex h-full w-full">
-      <div class="w-3/12 flex justify-center m-auto">
+      <div class="w-6/12 flex justify-center m-auto">
         <div class="w-11/12 mb-10 flex">
           <div class="w-2/5">
             <OneHitLogo class />
@@ -55,6 +55,7 @@ export default {};
    border-solid border-8 border-white
 }
 */
+
 :root {
   --moving-img-url: "https://cdn.discordapp.com/attachments/686653594551845104/754824944055091251/unknown.png";
   --bg-width: 943px;
@@ -66,7 +67,7 @@ export default {};
     background-position: 0px;
   }
   to {
-    background-position: var(--bg-width) var(--bg-height);
+    background-position: var(--bg-width) 0;
   }
 }
 

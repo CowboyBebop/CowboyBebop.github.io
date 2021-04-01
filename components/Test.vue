@@ -6,34 +6,36 @@
           class="flex w-screen h-screen thumbnail-container moving-img thumbnail-borders"
         >
           <div
-            class="w-7/12 h-auto ml-0 justify-center m-auto bg-white rounded-lg shadow-2xl thing"
+            class="w-8/12 h-auto justify-center m-auto bg-white rounded-lg shadow-2xl"
           >
-            <div class="flex">
-              <div class="w-2/5">
-                <OneHitLogo class="ml-auto mr-auto" />
+            <div class="flex grid-cols-2 grid-rows-1">
+              <div class="m-4">
+                <OneHitLogo class="block" style="height: 250px; width: 250px" />
               </div>
-              <div class="w-3/5 flex justify-center m-auto">
+              <div class="flex mt-auto mb-auto">
                 <div>
-                  <div class="w-full">
+                  <div class="w-full m-auto">
                     <h1 class="text-6xl leading-none .tracking-normal">
                       OneHit
                     </h1>
-                    <h2 class="text-2xl leading-none .tracking-normal w-full">
+                    <h2
+                      class="text-2xl leading-none .tracking-normal w-full whitespace-no-wrap"
+                    >
                       An Editor, Motion Graphics artist but a gamer at heart
                     </h2>
                   </div>
-                  <div class="flex justify-center mt-2 ml-2">
+                  <div class="flex mt-2 ml-0">
                     <a
                       href="#process"
-                      class="mr-6 ml-6 bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded"
+                      class="mr-4 ml-0 bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded"
                       >My process</a
                     >
                     <a
-                      class="mr-6 ml-6 bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded"
+                      class="ml-4 bg-transparent hover:bg-black text-black font-semibold hover:text-white py-2 px-4 border border-black hover:border-transparent rounded"
                       >Contact me</a
                     >
                   </div>
-                  <div class="flex justify-center mt-2 space-x-2">
+                  <div class="flex mt-2 ml-0 space-x-2">
                     <TwitterLogo class="w-12 h-12" style="color: #1da1f2" />
                     <DiscordLogo class="w-12 h-12" style="color: #7289da" />
                     <LinkedInLogo class="w-12 h-12" style="color: #0073b0" />
@@ -75,12 +77,13 @@
 }
 
 @keyframes appear-thing {
-  from {
-    margin-left: 100%;
+  0% {
+    position: absolute;
+    right: 100%;
   }
 
-  to {
-    margin-left: 0%;
+  100% {
+    right: 0%;
   }
 }
 
@@ -97,7 +100,7 @@
 */
 
 .thing {
-  animation-duration: 2s;
+  animation-duration: 5s;
   animation-name: appear-thing;
   animation-timing-function: ease-out;
 }
@@ -105,7 +108,7 @@
 .moving-img {
   animation-timing-function: linear;
   animation-delay: 0;
-  animation: bg-scrolling-reverse linear 100s infinite;
+  animation: bg-scrolling-reverse linear 20s infinite;
   background: url("https://cdn.discordapp.com/attachments/686653594551845104/754824944055091251/unknown.png")
     repeat 0 0;
 }

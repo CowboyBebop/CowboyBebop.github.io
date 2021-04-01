@@ -1,6 +1,6 @@
 <template>
   <div class="overflow-x-hidden">
-    <Test />
+    <FirstDiv />
     <ProcessDiv id="process" />
   </div>
 </template>
